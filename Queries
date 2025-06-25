@@ -1,0 +1,33 @@
+INSERT INTO Products (ProductID, ProductName, Category, Price, Stock)
+VALUES 
+(1, 'Wireless Mouse', 'Electronics', 499.99, 150),
+(2, 'Keyboard', 'Electronics', 799.50, 100),
+(3, 'Water Bottle', 'Home & Kitchen', 299.00, 200);
+
+INSERT INTO Customers (CustomerID, FullName, Email, Phone, Address)
+VALUES
+(101, 'Ravi Kumar', 'ravi.k@example.com', '9876543210', 'Hyderabad, Telangana'),
+(102, 'Sneha Reddy', 'sneha.r@example.com', '9123456780', 'Bangalore, Karnataka');
+
+INSERT INTO Orders (OrderID, CustomerID, ProductID, Quantity, OrderDate)
+VALUES
+(1001, 101, 1, 2, '2025-06-24'),
+(1002, 102, 3, 1, '2025-06-25');
+
+UPDATE Products
+SET Price = 459.99
+WHERE ProductID = 1;
+
+UPDATE Customers
+SET Address = 'Pune, Maharashtra'
+WHERE CustomerID = 102;
+
+UPDATE Orders
+SET Quantity = 3
+WHERE OrderID = 1001;
+
+DELETE FROM Orders
+WHERE CustomerID = 101;
+
+DELETE FROM Customers
+WHERE CustomerID = 101;
